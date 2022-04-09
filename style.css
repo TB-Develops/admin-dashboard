@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,800;1,600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;;
+}
+
+:root{
+    --color-white: #fff;
+    --color-bg: #2D142C;
+    --color-bg-alternate: #510A32;
+    --color-primary: #801336;
+    --color-secondary: #C72C41;
+}
+body{
+    background: linear-gradient(
+        200deg,
+        var(--color-bg) 20%,
+        var(--color-bg-alternate)
+    );
+}
+
+input{
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 0 2rem;
+    width: 100%;
+}
+
+input:focus{
+    outline: var(--color-primary) solid 2px;
+}
+
+button{
+    border: none;
+    padding: .5rem 1.25rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover{
+    background-color: var(--color-secondary);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: minmax(200px, .55fr) 4fr;
+    grid-template-rows: minmax(125px, 150px) 3fr;
+}
+
+.sidebar{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    grid-column: 1/2;
+    grid-row: 1/5;
+    padding: 0rem 3rem 0rem 1rem;
+
+}
+
+.header{
+    background-color: var(--color-white);
+    grid-column: 2/6;
+}
+
+.header__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem 0rem 2rem;
+}
+.header__bottom{
+    display: flex;
+}
+
+.header__introduce{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.header__nav{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 50%;
+    padding-right: 1rem;
+}
+
+.header__nav>ul{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    width: 20rem;
+}
+.main__content{
+    grid-row: 2/5;
+}
+
+.profile-pic{
+    width: 50px;
+    border-radius: 2em;
+}
+
+.profile-pic-LG{
+    width: 75px;
+    border-radius: 2em;
+}
+
+.icon{
+    width: 25px;
+}
